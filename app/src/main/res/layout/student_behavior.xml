@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Behavior"
+        android:id="@+id/behavior_text"
+        android:textSize="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="01/01/2016"
+        android:id="@+id/textView2"
+        android:textSize="25dp"
+        android:maxHeight="41dp"
+        android:maxWidth="170dp"
+        android:longClickable="false"
+        android:minHeight="41dp"
+        android:layout_alignBottom="@+id/behavior_text"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Rating"
+        android:id="@+id/behavior_rating"
+        android:layout_marginTop="29dp"
+        android:textSize="30sp"
+        android:layout_below="@+id/behavior_text"
+        android:layout_alignEnd="@+id/behavior_text" />
+
+    <ImageView
+        android:id="@+id/overall_progress_image_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/smile10"
+        android:maxHeight="20dp"
+        android:maxWidth="20dp"
+        android:layout_alignTop="@+id/behavior_rating"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_marginStart="40dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Description"
+        android:id="@+id/description_text"
+        android:layout_below="@+id/overall_progress_image_view"
+        android:layout_alignParentStart="true"
+        android:textSize="30sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="This is where we put the student description at"
+        android:id="@+id/student_description_text_box"
+        android:layout_below="@+id/description_text"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/overall_progress_image_view"
+        android:layout_alignStart="@+id/description_text"
+        android:layout_marginLeft="40dp"
+        android:textSize="14sp" />
+
+</RelativeLayout>

@@ -16,7 +16,19 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/layout_student_home_page"></RelativeLayout>
+            android:id="@+id/layout_student_home_page">
+
+            <include layout="@layout/overall_progress"
+                android:id="@+id/include2" />
+
+            <include
+                layout="@layout/student_behavior"
+                android:layout_below="@+id/include2"
+                android:layout_alignParentStart="true"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+        </RelativeLayout>
     </ScrollView>
 
 </RelativeLayout>
