@@ -12,10 +12,10 @@ import projectmadcap.madcap.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class behavior_descriptions extends Fragment {
+public class Behaviors extends Fragment {
 
 
-    public behavior_descriptions() {
+    public Behaviors() {
         // Required empty public constructor
     }
 
@@ -24,7 +24,7 @@ public class behavior_descriptions extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_behavior_descriptions, container, false);
+        return inflater.inflate(R.layout.fragment_behavior, container, false);
     }
 
 }

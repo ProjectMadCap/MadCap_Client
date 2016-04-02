@@ -2,8 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context="layout.behavior_descriptions"
-    android:id="@+id/fragment_behavior_descriptions">
+    tools:context="layout.Behaviors"
+    android:id="@+id/fragment_behavior">
 
 
         <TextView

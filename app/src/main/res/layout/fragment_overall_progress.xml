@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context="projectmadcap.madcap.fragment_overall_progress"
+    tools:context=".FragmentOverallProgress"
     android:id="@+id/fragment_overall_progress">
 
 
