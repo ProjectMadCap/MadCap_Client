@@ -30,6 +30,7 @@
             android:value="@integer/google_play_services_version" />
 
         <activity android:name=".StudentHomePage" />
+        <activity android:name=".BehaviorDescription"></activity>
     </application>
 
 </manifest>

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:id="@+id/activity_student">
+    android:id="@+id/activity_student_home_page">
 
-    <include layout="@layout/toolbar"
+    <include layout="@layout/fragment_toolbar"
         android:id="@+id/include" />
 
-    <include layout="@layout/overall_progress"
+    <include layout="@layout/fragment_overall_progress"
         android:id="@+id/include2"
         android:layout_below="@+id/include"
         android:layout_alignParentStart="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <include layout="@layout/student_behavior"
+    <include layout="@layout/fragment_behavior_descriptions"
         android:layout_below="@+id/include2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

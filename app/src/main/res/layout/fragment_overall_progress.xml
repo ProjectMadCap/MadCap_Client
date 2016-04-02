@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="projectmadcap.madcap.fragment_overall_progress"
+    android:id="@+id/fragment_overall_progress">
+
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    android:text="Overall Progress"
+    android:id="@+id/textView"
+    android:textSize="28sp"
+    android:layout_marginStart="32dp"
+    android:layout_marginTop="35dp"
+    android:layout_marginLeft="66dp"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentStart="true" />
+
+
+    <ImageView
+        android:id="@+id/overall_progress_image_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/smile10"
+        android:maxHeight="20dp"
+        android:maxWidth="20dp"
+        android:layout_marginEnd="41dp"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginLeft="252dp"
+        android:layout_alignTop="@+id/textView"
+        android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>
