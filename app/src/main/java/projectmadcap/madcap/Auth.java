@@ -1,5 +1,6 @@
 package projectmadcap.madcap;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -65,6 +66,8 @@ public class Auth extends AppCompatActivity {
                 for(int i = 1; i < result[3].length()-2; i++)
                     token += result[3].charAt(i);
                 Log.d("RESPONSE", token);
+                Intent intent = new Intent(Auth.this, StudentHomePage.class);
+                startActivity(intent);
             }
         });
     }
