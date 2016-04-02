@@ -61,7 +61,6 @@ public class Auth extends AppCompatActivity {
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 String[] result = response.body().string().split(":");
-                Log.d("RESPONSE", result[3]);
                 token = "";
                 for(int i = 1; i < result[3].length()-2; i++)
                     token += result[3].charAt(i);
