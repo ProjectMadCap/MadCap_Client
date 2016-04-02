@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content" android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Behaviors"
+        android:id="@+id/behavior_text"
+        android:textSize="55dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="01/01/2016"
+        android:id="@+id/textView2"
+        android:textSize="25dp"
+        android:maxHeight="41dp"
+        android:maxWidth="170dp"
+        android:longClickable="false"
+        android:minHeight="41dp"
+        android:layout_alignBottom="@+id/behavior_text"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
