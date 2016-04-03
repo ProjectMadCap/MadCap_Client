@@ -1,39 +1,38 @@
-<android.support.v7.widget.Toolbar android:id="@+id/fragment_toolbar"
-        android:minHeight="?attr/actionBarSize"
-        android:background="#2196F3"
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/primary"
+    android:minHeight="?attr/actionBarSize">
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        xmlns:android="http://schemas.android.com/apk/res/android">
+        android:layout_height="match_parent"
+        android:layout_margin="16dp">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/student_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:maxLines="1"
+            android:text="Student Name"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/icons"
+            android:textSize="35dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Student Name"
-                android:id="@+id/student_name"
-                android:textColor="#fffbe7"
-                android:textSize="35dp"
-                android:maxLines="1"
-                android:layout_marginLeft="0dp"
-                android:layout_centerVertical="true"
-                android:layout_alignParentStart="true" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Menu"
-                android:id="@+id/menu_button"
-                android:layout_marginRight="0dp"
-                android:layout_marginLeft="0dp"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:textColor="#b675fbb8"
-                android:background="#000000" />
-        </RelativeLayout>
+        <Button
+            android:id="@+id/menu_button"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/apple_icon"
+            android:text="Menu"
+            android:textSize="12sp"
+            android:textColor="#b675fbb8" />
+    </RelativeLayout>
 
 </android.support.v7.widget.Toolbar>
 

@@ -4,7 +4,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".FragmentNotificationBehaviorTemplate"
-        android:id="@+id/fragment_notification_behavior_template">
+        android:id="@+id/fragment_notification_behavior_template"
+    android:background="@drawable/school_backround">
 
         <Button
             android:layout_width="match_parent"
@@ -14,6 +15,6 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:textSize="24sp"
-            android:background="#d868fcf0" />
+            android:background="#5c68fcf0" />
 </FrameLayout>
 
