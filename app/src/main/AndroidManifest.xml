@@ -33,7 +33,8 @@
         <activity android:name=".ActivityUnitsMainScreen" />
         <activity android:name=".ActivityBehaviorsMainScreen" />
         <activity android:name=".ActivityBehaviorsChooseScreen" />
-        <activity android:name=".ActivityUnitsChooseScreen"></activity>
+        <activity android:name=".ActivityUnitsChooseScreen" />
+        <activity android:name=".socketIO.SocketActivity"></activity>
     </application>
 
 </manifest>
