@@ -53,7 +53,7 @@ public class ActivityAuth extends AppCompatActivity {
         Pair<String, String> emailPair = new Pair<>("email", email);
         Pair<String, String> passPair = new Pair<>("password", password);
 
-        Call call = loginPost.post("http://45.55.142.81/authenticate", emailPair, passPair, new Callback() {
+        Call call = loginPost.post("http://45.55.142.81/authenticate/", emailPair, passPair, new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
                 Log.e("JSON FAILURE", "could not connect to database server");
