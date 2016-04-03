@@ -3,6 +3,7 @@ package projectmadcap.madcap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -19,13 +20,14 @@ public class ActivityStudentHomePage extends AppCompatActivity {
 
     private static String guardianID;
     private static LinkedList<Student> students;
+    TextView name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_home_page);
         final StudentGet stuGet = new StudentGet();
-
+        name = (TextView)findViewById(R.id.student_name);
         try {
             Call call = stuGet.getBlank("http://45.55.142.81/api/sexyGuardian/" +  ActivityAuth.getEmail(),
                     new Callback() {
@@ -74,6 +76,7 @@ public class ActivityStudentHomePage extends AppCompatActivity {
                                                     e.printStackTrace();
                                                 }
                                             }
+                                            name.setText(students.get(0).getStudentName());
                                         }
                                     });
                         }
