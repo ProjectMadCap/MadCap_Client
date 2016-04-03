@@ -12,10 +12,10 @@ import projectmadcap.madcap.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Toolbar extends Fragment {
+public class toolbar extends Fragment {
 
 
-    public Toolbar() {
+    public toolbar() {
         // Required empty public constructor
     }
 
