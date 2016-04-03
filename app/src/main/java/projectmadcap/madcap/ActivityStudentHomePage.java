@@ -119,6 +119,9 @@ public class ActivityStudentHomePage extends AppCompatActivity {
     private static LinkedList<Student> students;
     private static BehaviorList behaviors;
     private BehaviorNotifications[] behaviorNotificationsList;
+    public int doneFlag;
+    public JSONArray weeks;
+    public String weekStr;
     TextView name;
 
     @Override
@@ -127,6 +130,7 @@ public class ActivityStudentHomePage extends AppCompatActivity {
         setContentView(R.layout.activity_student_home_page);
         final StudentGet stuGet = new StudentGet();
         name = (TextView)findViewById(R.id.student_name);
+        doneFlag = 0;
 
         try {
             Call call = stuGet.getBlank("http://45.55.142.81/api/sexyGuardian/" +  ActivityAuth.getEmail(),
@@ -189,13 +193,14 @@ public class ActivityStudentHomePage extends AppCompatActivity {
 
                                                         @Override
                                                         public void onResponse(Call call, Response response) throws IOException {
-                                                            final String weekStr = response.body().string();
+                                                            weekStr = response.body().string();
                                                             Log.d("HISTORY_WEEK", weekStr);
                                                             runOnUiThread(new Runnable() {
                                                                 @Override
                                                                 public void run() {
                                                                     name.setText(nameStr);
-                                                                    JSONArray weeks = null;
+                                                                     doneFlag = 1;
+                                                                    weeks = null;
                                                                     behaviors = new BehaviorList();
                                                                     try {
                                                                         weeks = new JSONArray(weekStr);
@@ -248,6 +253,9 @@ public class ActivityStudentHomePage extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        //while(doneFlag != 1);
+
+
 
     }
 
