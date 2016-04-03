@@ -5,7 +5,7 @@ package projectmadcap.madcap;
  */
 public class Behavior
 {
-    //public String week;
+    public String week;
     public int weekNumber;
     public int performance;
     public String notes;
@@ -18,6 +18,7 @@ public class Behavior
         notes = notesToAdd;
         pastViewed = viewed;
         this.weekNumber = Integer.parseInt(weekNumber);
+        week = "Week " + weekNumber;
         //String[] tokens = week.split(" ");
         //weekNumber = Integer.parseInt(tokens[1]);
     }
@@ -55,9 +56,9 @@ public class Behavior
         return performance;
     }
 
-    //public String getWeek() {
-   //     return week;
-   // }
+    public String getWeek() {
+        return week;
+    }
 
     public int getWeekNumber() {
         return weekNumber;
