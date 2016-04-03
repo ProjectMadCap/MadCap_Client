@@ -11,8 +11,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:windowSoftInputMode="stateAlwaysVisible|adjustResize"
-        >
+        android:layout_margin="16dp"
+        android:windowSoftInputMode="stateAlwaysVisible|adjustResize">
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/input_layout_email"
@@ -35,10 +35,10 @@
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
-            android:layout_below="@+id/input_layout_email"
             android:id="@+id/input_layout_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/input_layout_email"
             android:textColorHint="@color/icons">
 
             <EditText
@@ -62,7 +62,7 @@
             android:layout_centerHorizontal="true"
             android:gravity="center"
             android:text="login"
-            android:textColor="@color/accent" />
+            android:textColor="@color/primary_dark" />
     </RelativeLayout>
 
 
