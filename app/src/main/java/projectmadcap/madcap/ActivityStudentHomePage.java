@@ -228,7 +228,7 @@ public class ActivityStudentHomePage extends AppCompatActivity {
                                                                     for(int count = 0; count < behaviors.size(); count++) {
                                                                         if(behaviors.get(count).isPastViewed() == false) {
                                                                             behaviorNotificationsList[counter] = new
-                                                                                    BehaviorNotifications(behaviors.get(count).weekNumber);
+                                                                                    BehaviorNotifications(behaviors.get(count).getWeekNumber(), count);
                                                                             counter++;
                                                                         }
                                                                     }
@@ -239,7 +239,9 @@ public class ActivityStudentHomePage extends AppCompatActivity {
                                                                     {
 
                                                                         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                                                                            //behaviorNotificationsList[position]
+                                                                            ActivityBehaviorsChooseScreen.selectedBehavior = behaviors.get(behaviorNotificationsList[position].getWeekId());
+                                                                            Intent intent = new Intent(ActivityStudentHomePage.this, ActivityBehaviorsChooseScreen.class);
+                                                                            startActivity(intent);
                                                                         }
                                                                     });
                                                                 }

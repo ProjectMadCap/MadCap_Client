@@ -5,7 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 
@@ -21,17 +23,28 @@ public class ActivityBehaviorsChooseScreen extends AppCompatActivity implements 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_behaviors_choose_screen);
-
+        Toolbar toolbar = (Toolbar)findViewById(R.id.fragment_toolbar);
+        setSupportActionBar(toolbar);
+        Button menu = (Button)findViewById(R.id.menu_button);
         RecyclerView week_list = (RecyclerView) findViewById(R.id.recycler_weeks);
 
         List<ModelWeek> weekArray = getWeeks();
         TextView name = (TextView)findViewById(R.id.student_name);
         name.setText(ActivityAuth.studentName);
-
+        ActivityAuth.lastPageOpen = "ActivityBehaviorsChooseScreen";
         adapter = new AdapterWeek(ActivityBehaviorsChooseScreen.this, weekArray);
         week_list.setAdapter(adapter);
         week_list.setLayoutManager(new LinearLayoutManager(ActivityBehaviorsChooseScreen.this));
         adapter.setClickListener(this);
+        if (menu != null) {
+            menu.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(ActivityBehaviorsChooseScreen.this, MenuActivity.class);
+                    startActivity(intent);
+                }
+            });
+        }
     }
 
 

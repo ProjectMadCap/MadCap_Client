@@ -18,7 +18,8 @@ public class ActivityBehaviorsMainScreen extends AppCompatActivity {
         Toolbar toolbar = (Toolbar)findViewById(R.id.fragment_toolbar);
         setSupportActionBar(toolbar);
         Button menu = (Button)findViewById(R.id.menu_button);
-        ActivityAuth.lastPageOpen = "ActivityBehaviorsManScreen";
+
+        ActivityAuth.lastPageOpen = "ActivityBehaviorsMainScreen";
         if (menu != null) {
             menu.setOnClickListener(new View.OnClickListener() {
                 @Override
