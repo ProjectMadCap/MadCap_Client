@@ -7,10 +7,12 @@ public class BehaviorNotifications
 {
 
     public String text;
+    public int weekId;
+    public int positionInBehaviors;
 
-    public BehaviorNotifications(int week)
+    public BehaviorNotifications(int week, int positionInBehaviors)
     {
-
+        weekId = week;
         text = "Week " + week + " Unread Behaviors";
 
     }
@@ -19,4 +21,8 @@ public class BehaviorNotifications
     {
         return text;
     }
+
+    public int getWeekId() { return weekId;}
+
+    public int getPositionInBehaviors() { return positionInBehaviors;}
 }

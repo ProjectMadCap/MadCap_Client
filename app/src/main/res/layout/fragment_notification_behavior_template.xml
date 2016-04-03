@@ -13,7 +13,7 @@
         android:text="text"
         android:id="@+id/behavior_notification_Button"
         android:layout_centerHorizontal="true"
-        android:background="#c600f6ee"
+        android:background="#c2fffbf5"
         android:textColor="#000000"
         android:textSize="35sp"
         android:textAlignment="center" />

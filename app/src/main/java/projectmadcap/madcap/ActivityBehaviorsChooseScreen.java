@@ -12,9 +12,10 @@ import android.widget.Button;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ActivityBehaviorsChooseScreen extends AppCompatActivity {
-
+public class ActivityBehaviorsChooseScreen extends AppCompatActivity implements View.OnClickListener, AdapterWeek.ClickListener{
+    List<ModelWeek> data;
     AdapterWeek adapter;
+    public static Behavior selectedBehavior;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,9 @@ public class ActivityBehaviorsChooseScreen extends AppCompatActivity {
 
         List<ModelWeek> weekArray = getWeeks();
         ActivityAuth.lastPageOpen = "ActivityBehaviorsChooseScreen";
+        TextView name = (TextView)findViewById(R.id.student_name);
+        name.setText(ActivityAuth.studentName);
+
         adapter = new AdapterWeek(ActivityBehaviorsChooseScreen.this, weekArray);
         week_list.setAdapter(adapter);
         week_list.setLayoutManager(new LinearLayoutManager(ActivityBehaviorsChooseScreen.this));
@@ -41,6 +45,7 @@ public class ActivityBehaviorsChooseScreen extends AppCompatActivity {
                 }
             });
         }
+        adapter.setClickListener(this);
     }
 
 

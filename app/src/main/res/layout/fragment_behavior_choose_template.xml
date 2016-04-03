@@ -23,6 +23,6 @@
         android:layout_centerVertical="true"
         android:layout_marginLeft="40dp"
         android:layout_toRightOf="@+id/week_text"
-        android:background="@drawable/smile10" />
+        android:background="@drawable/star" />
 
 </RelativeLayout>

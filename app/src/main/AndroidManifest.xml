@@ -35,7 +35,6 @@
         <activity android:name=".ActivityBehaviorsChooseScreen" />
         <activity android:name=".ActivityUnitsChooseScreen" />
         <activity android:name=".socketIO.SocketActivity" />
-        <activity android:name=".MenuActivity"></activity>
     </application>
 
 </manifest>
