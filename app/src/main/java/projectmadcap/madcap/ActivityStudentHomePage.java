@@ -122,7 +122,7 @@ public class ActivityStudentHomePage extends AppCompatActivity {
     private static LinkedList<Student> students;
     private static BehaviorList behaviors;
     private BehaviorNotifications[] behaviorNotificationsList;
-    TextView name;
+    public TextView name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -187,6 +187,7 @@ public class ActivityStudentHomePage extends AppCompatActivity {
                                                 }
                                             }
                                             final String nameStr = students.get(0).getStudentName();
+                                            ActivityAuth.studentName = nameStr;
                                             stuGet.getBlank("http://45.55.142.81/api/behaviorHistory/" + students.get(0).getId(),
                                                     new Callback() {
                                                         @Override

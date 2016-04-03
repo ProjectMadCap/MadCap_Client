@@ -1,25 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_behaviors_main_screen"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/school_backround"
     android:orientation="vertical"
-    tools:context=".ActivityUnitsMainScreen">
+    tools:context=".ActivityUnitsMainScreen"
+    android:weightSum="1">
 
     <include
-        layout="@layout/fragment_toolbar">
+        layout="@layout/fragment_toolbar"
+        android:id="@+id/toolbar">
     </include>
 
 
-    <include
-        layout="@layout/fragment_units_main_list"
+
+    <ImageView
+        android:id="@+id/overall_progress_image_view"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginLeft="252dp"
+        android:maxHeight="20dp"
+        android:maxWidth="20dp"
+        android:src="@drawable/smile10"
+        android:layout_marginEnd="56dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="53dp" />
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Performance"
+        android:id="@+id/textView4"
+        android:layout_alignBottom="@+id/overall_progress_image_view"
         android:layout_alignParentStart="true"
-        android:layout_margin="16dp" />
+        android:textSize="35dp" />
 
-</LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Comments"
+        android:id="@+id/textView5"
+        android:textSize="35dp"
+        android:textColor="#ffffff"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/comments_to_add"
+        android:layout_below="@+id/textView5"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:textColor="#ffffff"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Week"
+        android:id="@+id/week_text_view"
+        android:layout_above="@+id/textView4"
+        android:layout_centerHorizontal="true"
+        android:textSize="35dp" />
+
+
+</RelativeLayout>

@@ -23,16 +23,16 @@ public class ActivityBehaviorsChooseScreen extends AppCompatActivity implements 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_behaviors_choose_screen);
-        Toolbar toolbar = (Toolbar)findViewById(R.id.fragment_toolbar);
-        setSupportActionBar(toolbar);
+        //Toolbar toolbar = (Toolbar)findViewById(R.id.fragment_toolbar);
+        //setSupportActionBar(toolbar);
         Button menu = (Button)findViewById(R.id.menu_button);
         RecyclerView week_list = (RecyclerView) findViewById(R.id.recycler_weeks);
 
-        List<ModelWeek> weekArray = getWeeks();
+        data = getWeeks();
         TextView name = (TextView)findViewById(R.id.student_name);
         name.setText(ActivityAuth.studentName);
         ActivityAuth.lastPageOpen = "ActivityBehaviorsChooseScreen";
-        adapter = new AdapterWeek(ActivityBehaviorsChooseScreen.this, weekArray);
+        adapter = new AdapterWeek(ActivityBehaviorsChooseScreen.this, data);
         week_list.setAdapter(adapter);
         week_list.setLayoutManager(new LinearLayoutManager(ActivityBehaviorsChooseScreen.this));
         adapter.setClickListener(this);
