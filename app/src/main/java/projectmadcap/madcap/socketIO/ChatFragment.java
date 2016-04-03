@@ -251,6 +251,7 @@ public class ChatFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+        socket.disconnect();
     }
 
     /**
