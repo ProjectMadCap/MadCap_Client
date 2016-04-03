@@ -60,9 +60,11 @@ public class ActivityAuth extends AppCompatActivity {
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
-                String result = response.body().string();
-
-                Log.d("RESPONSE", result);
+                String temp = response.body().string();
+                //String[] result = temp.split(":");
+                //if(result[1].equals("false,\"message\""))
+                //    return;
+                Log.d("RESPONSE", temp);
                 Intent intent = new Intent(ActivityAuth.this, ActivityStudentHomePage.class);
                 startActivity(intent);
             }
