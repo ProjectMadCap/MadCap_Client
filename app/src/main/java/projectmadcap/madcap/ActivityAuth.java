@@ -52,9 +52,9 @@ public class ActivityAuth extends AppCompatActivity {
         email = inputEmail.getText().toString();
         String password = inputPassword.getText().toString();
         Log.d("EMAIL_PASSWORD", email + " " + password);
-        Intent intent = new Intent(ActivityAuth.this, ActivityStudentHomePage.class);
-        startActivity(intent);
-        /*LoginPost loginPost = new LoginPost();
+        //Intent intent = new Intent(ActivityAuth.this, ActivityStudentHomePage.class);
+        //startActivity(intent);
+        LoginPost loginPost = new LoginPost();
         Pair<String, String> emailPair = new Pair<>("email", email);
         Pair<String, String> passPair = new Pair<>("password", password);
 
@@ -74,7 +74,7 @@ public class ActivityAuth extends AppCompatActivity {
                 Intent intent = new Intent(ActivityAuth.this, ActivityStudentHomePage.class);
                 startActivity(intent);
             }
-        });*/
+        });
     }
 
     public static String getEmail() {
