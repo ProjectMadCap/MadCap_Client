@@ -17,8 +17,7 @@ import okhttp3.Response;
 
 
 public class ActivityAuth extends AppCompatActivity {
-
-    public static String token;
+    private static String email;
     EditText inputEmail;
     EditText inputPassword;
 
@@ -46,14 +45,14 @@ public class ActivityAuth extends AppCompatActivity {
     }
 
     public void login() throws IOException {
-        String email = inputEmail.getText().toString();
+        email = inputEmail.getText().toString();
         String password = inputPassword.getText().toString();
         Log.d("EMAIL_PASSWORD", email + " " + password);
         LoginPost loginPost = new LoginPost();
         Pair<String, String> emailPair = new Pair<>("email", email);
         Pair<String, String> passPair = new Pair<>("password", password);
 
-        Call call = loginPost.post("http://45.55.142.81/authenticate", emailPair, passPair, new Callback() {
+        Call call = loginPost.post("http://45.55.142.81/authenticate/device", emailPair, passPair, new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
                 Log.e("JSON FAILURE", "could not connect to database server");
@@ -61,14 +60,16 @@ public class ActivityAuth extends AppCompatActivity {
 
             @Override
             public void onResponse(Call call, Response response) throws IOException {
-                String[] result = response.body().string().split(":");
-                token = "";
-                for(int i = 1; i < result[3].length()-2; i++)
-                    token += result[3].charAt(i);
-                Log.d("RESPONSE", token);
+                String result = response.body().string();
+
+                Log.d("RESPONSE", result);
                 Intent intent = new Intent(ActivityAuth.this, ActivityStudentHomePage.class);
                 startActivity(intent);
             }
         });
+    }
+
+    public static String getEmail() {
+        return email;
     }
 }
