@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Nick\Desktop\CodeFest\MadCap_Client\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.2.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="e3885783ff8926ed9e2fdcd16816c2e1e73e7aee">
+        <dex dex="C:\Users\Nick\Desktop\CodeFest\MadCap_Client\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.2.1_fd7662a624aa5e67a0e46c8a2da0a0cf80022f90\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Nick\Desktop\CodeFest\MadCap_Client\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="673d77a5bbddd766037f088e775df525c46407f0">
+        <dex dex="C:\Users\Nick\Desktop\CodeFest\MadCap_Client\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.2.1_591589abb52bc1368a2bcc29df8a47741709463f\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Nick\Desktop\CodeFest\MadCap_Client\app\build\intermediates\exploded-aar\com.android.support\design\23.2.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="72961d8b453b46e277702f18de9d210bc019e36e">
+        <dex dex="C:\Users\Nick\Desktop\CodeFest\MadCap_Client\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.2.1_01371abb4dd079dcd78e19737c44a5c08db6f53d\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Nick\Desktop\CodeFest\MadCap_Client\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="e4d0cbb0b999604b349062f0214a0a228a7fd151">
+        <dex dex="C:\Users\Nick\Desktop\CodeFest\MadCap_Client\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.2.1_421d2514dbe925c94873d5a7d96cba25225167bf\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Nick\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.6.0\98476622f10715998eacf9240d6b479f12c66143\okio-1.6.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="98476622f10715998eacf9240d6b479f12c66143">
+        <dex dex="C:\Users\Nick\Desktop\CodeFest\MadCap_Client\app\build\intermediates\transforms\dex\debug\folders\1000\10\okio-1.6.0_fcb174adf5acb3ef8df13dd3245c7763c5077603\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Nick\Desktop\CodeFest\MadCap_Client\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="afd443f1b3209e029e6309e7955318e6f24351ab">
+        <dex dex="C:\Users\Nick\Desktop\CodeFest\MadCap_Client\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_f20d620ce14a6461668d22333383adf0a9dc97d2\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Nick\Desktop\CodeFest\MadCap_Client\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="3469cb457f10f74c28cbc05f069b6c894f6cbdd0">
+        <dex dex="C:\Users\Nick\Desktop\CodeFest\MadCap_Client\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-23.2.1_7ef8f57e2a64af7312cb19d3832d293a1840cf38\classes.dex" />
+    </item>
+    <item
+        jar="S:\Android_SDK\extras\android\m2repository\com\android\support\support-annotations\23.2.1\support-annotations-23.2.1.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
+        <dex dex="C:\Users\Nick\Desktop\CodeFest\MadCap_Client\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.2.1_a212865f9ac31d563c8c20221dedf07b8dffed2d\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Nick\.gradle\caches\modules-2\files-2.1\com.squareup.mimecraft\mimecraft\1.1.1\66f73c3e42fa4658ef1cbae8b1ebefdaa856a23c\mimecraft-1.1.1.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="66f73c3e42fa4658ef1cbae8b1ebefdaa856a23c">
+        <dex dex="C:\Users\Nick\Desktop\CodeFest\MadCap_Client\app\build\intermediates\transforms\dex\debug\folders\1000\10\mimecraft-1.1.1_f01c39e9f32cb495dbd29a2d657e6114faf04aff\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Nick\Desktop\CodeFest\MadCap_Client\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\jars\libs\internal_impl-23.2.1.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="C:\Users\Nick\Desktop\CodeFest\MadCap_Client\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.2.1_b6d691b619fad6f0fee3e4a27c48bbdef39b1abc\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Nick\Desktop\CodeFest\MadCap_Client\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="C:\Users\Nick\Desktop\CodeFest\MadCap_Client\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.2.1_2f12e1bf395c0c8658f49117e0c1baae250cea3d\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Nick\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.2.0\f7873a2ebde246a45c2a8d6f3247108b4c88a879\okhttp-3.2.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="f7873a2ebde246a45c2a8d6f3247108b4c88a879">
+        <dex dex="C:\Users\Nick\Desktop\CodeFest\MadCap_Client\app\build\intermediates\transforms\dex\debug\folders\1000\10\okhttp-3.2.0_5fc19751bf2e4e63306deb8fa679d1dca8a21791\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Nick\Desktop\CodeFest\MadCap_Client\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="b32ba08179de33b1ed8044b261f052477326c8df">
+        <dex dex="C:\Users\Nick\Desktop\CodeFest\MadCap_Client\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_15d58137f8f6f18ba986ca75adf4db82bcac346c\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Nick\Desktop\CodeFest\MadCap_Client\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
+        <dex dex="C:\Users\Nick\Desktop\CodeFest\MadCap_Client\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-8.1.0_831b117e80ef972545cd0cc9507602cdac496de9\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Nick\Desktop\CodeFest\MadCap_Client\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\jars\classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="4477ea44f5ec5ad064022a22691732d7638ff197">
+        <dex dex="C:\Users\Nick\Desktop\CodeFest\MadCap_Client\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appindexing-8.1.0_c80f5e195811f495414a9008686f1b4a95b49efa\classes.dex" />
+    </item>
+
+</items>
