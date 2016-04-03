@@ -178,7 +178,7 @@ public class ActivityStudentHomePage extends AppCompatActivity {
                                                     e.printStackTrace();
                                                 }
                                             }
-                                            name.setText(students.get(0).getStudentName());
+                                            final String nameStr = students.get(0).getStudentName();
                                             stuGet.getBlank("http://45.55.142.81/api/behaviorHistory/" + students.get(0).getId(),
                                                     new Callback() {
                                                         @Override
@@ -190,6 +190,12 @@ public class ActivityStudentHomePage extends AppCompatActivity {
                                                         public void onResponse(Call call, Response response) throws IOException {
                                                             String resp = response.body().string();
                                                             Log.d("HISTORY_WEEK", resp);
+                                                            runOnUiThread(new Runnable() {
+                                                                @Override
+                                                                public void run() {
+                                                                    name.setText(nameStr);
+                                                                }
+                                                            });
                                                         }
 
 
