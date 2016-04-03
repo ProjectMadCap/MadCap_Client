@@ -1,15 +1,18 @@
 package projectmadcap.madcap;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -127,6 +130,10 @@ public class ActivityStudentHomePage extends AppCompatActivity {
         setContentView(R.layout.activity_student_home_page);
         final StudentGet stuGet = new StudentGet();
         name = (TextView)findViewById(R.id.student_name);
+        //Toolbar toolbar = (Toolbar)findViewById(R.id.fragment_toolbar);
+        //setSupportActionBar(toolbar);
+        Button menu = (Button)findViewById(R.id.menu_button);
+        ActivityAuth.lastPageOpen = "ActivityStudentHomePage";
 
         try {
             Call call = stuGet.getBlank("http://45.55.142.81/api/sexyGuardian/" +  ActivityAuth.getEmail(),
@@ -249,6 +256,15 @@ public class ActivityStudentHomePage extends AppCompatActivity {
             e.printStackTrace();
         }
 
+        if (menu != null) {
+            menu.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(ActivityStudentHomePage.this, MenuActivity.class);
+                    startActivity(intent);
+                }
+            });
+        }
     }
 
 

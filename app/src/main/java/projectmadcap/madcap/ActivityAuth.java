@@ -21,6 +21,7 @@ public class ActivityAuth extends AppCompatActivity {
     private static String email;
     EditText inputEmail;
     EditText inputPassword;
+    public static String lastPageOpen = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
