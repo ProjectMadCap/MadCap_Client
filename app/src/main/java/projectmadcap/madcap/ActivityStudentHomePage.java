@@ -42,7 +42,7 @@ public class ActivityStudentHomePage extends AppCompatActivity {
                             Log.d("GUARD_RESPONSE", resp);
                             String[] result = resp.split(":");
                             guardianID = "";
-                            for(int i = 1; i < result[5].length() - 7; i++) {
+                            for (int i = 1; i < result[5].length() - 7; i++) {
                                 guardianID += result[5].charAt(i);
                             }
                             Log.d("GUARDIAN_ID", guardianID);
@@ -67,7 +67,7 @@ public class ActivityStudentHomePage extends AppCompatActivity {
                                             }
                                             int numStudents = job.length();
                                             students = new LinkedList<Student>();
-                                            for(int i = 0; i < numStudents; i++) {
+                                            for (int i = 0; i < numStudents; i++) {
                                                 try {
                                                     students.add(new Student(job.getJSONObject(i).getString("first") + " "
                                                             + job.getJSONObject(i).getString("last"),
@@ -77,10 +77,25 @@ public class ActivityStudentHomePage extends AppCompatActivity {
                                                 }
                                             }
                                             name.setText(students.get(0).getStudentName());
+                                            stuGet.getBlank("http://45.55.142.81/api/behaviorHistory/" + students.get(0).getId(),
+                                                    new Callback() {
+                                                        @Override
+                                                        public void onFailure(Call call, IOException e) {
+                                                            Log.e("JSON FAILURE", "could not connect to database server");
+                                                        }
+
+                                                        @Override
+                                                        public void onResponse(Call call, Response response) throws IOException {
+                                                            String resp = response.body().string();
+                                                            Log.d("HISTORY_WEEK", resp);
+                                                        }
+
+
+                                                    });
                                         }
                                     });
                         }
-                    });
+        });
         } catch (IOException e) {
             e.printStackTrace();
         }
