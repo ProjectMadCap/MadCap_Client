@@ -10,9 +10,12 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_margin="16dp"
-        android:windowSoftInputMode="stateAlwaysVisible|adjustResize">
+        android:windowSoftInputMode="stateAlwaysVisible|adjustResize"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="143dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
 
 
         <android.support.design.widget.TextInputLayout
@@ -57,7 +60,7 @@
         <Button
             android:id="@+id/btn_login"
             style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/input_layout_password"
             android:layout_centerHorizontal="true"
