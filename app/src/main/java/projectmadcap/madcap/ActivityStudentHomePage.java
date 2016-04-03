@@ -1,6 +1,7 @@
 package projectmadcap.madcap;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
@@ -119,6 +120,10 @@ public class ActivityStudentHomePage extends AppCompatActivity {
     private static LinkedList<Student> students;
     private static BehaviorList behaviors;
     private BehaviorNotifications[] behaviorNotificationsList;
+    public int doneFlag;
+    public JSONArray weeks;
+    public String weekStr;
+
     TextView name;
 
     @Override
@@ -127,6 +132,7 @@ public class ActivityStudentHomePage extends AppCompatActivity {
         setContentView(R.layout.activity_student_home_page);
         final StudentGet stuGet = new StudentGet();
         name = (TextView)findViewById(R.id.student_name);
+        doneFlag = 0;
 
         try {
             Call call = stuGet.getBlank("http://45.55.142.81/api/sexyGuardian/" +  ActivityAuth.getEmail(),
@@ -180,6 +186,7 @@ public class ActivityStudentHomePage extends AppCompatActivity {
                                                 }
                                             }
                                             final String nameStr = students.get(0).getStudentName();
+                                            ActivityAuth.studentName = nameStr;
                                             stuGet.getBlank("http://45.55.142.81/api/behaviorHistory/" + students.get(0).getId(),
                                                     new Callback() {
                                                         @Override
@@ -189,13 +196,14 @@ public class ActivityStudentHomePage extends AppCompatActivity {
 
                                                         @Override
                                                         public void onResponse(Call call, Response response) throws IOException {
-                                                            final String weekStr = response.body().string();
+                                                            weekStr = response.body().string();
                                                             Log.d("HISTORY_WEEK", weekStr);
                                                             runOnUiThread(new Runnable() {
                                                                 @Override
                                                                 public void run() {
                                                                     name.setText(nameStr);
-                                                                    JSONArray weeks = null;
+                                                                     doneFlag = 1;
+                                                                    weeks = null;
                                                                     behaviors = new BehaviorList();
                                                                     try {
                                                                         weeks = new JSONArray(weekStr);
@@ -221,7 +229,7 @@ public class ActivityStudentHomePage extends AppCompatActivity {
                                                                     for(int count = 0; count < behaviors.size(); count++) {
                                                                         if(behaviors.get(count).isPastViewed() == false) {
                                                                             behaviorNotificationsList[counter] = new
-                                                                                    BehaviorNotifications(behaviors.get(count).weekNumber);
+                                                                                    BehaviorNotifications(behaviors.get(count).weekNumber, count);
                                                                             counter++;
                                                                         }
                                                                     }
@@ -232,7 +240,9 @@ public class ActivityStudentHomePage extends AppCompatActivity {
                                                                     {
 
                                                                         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                                                                            //behaviorNotificationsList[position]
+                                                                            ActivityBehaviorsChooseScreen.selectedBehavior = behaviors.get(behaviorNotificationsList[position].getWeekId());
+                                                                            Intent intent = new Intent(ActivityStudentHomePage.this, ActivityBehaviorsChooseScreen.class);
+                                                                            startActivity(intent);
                                                                         }
                                                                     });
                                                                 }
@@ -248,6 +258,9 @@ public class ActivityStudentHomePage extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        //while(doneFlag != 1);
+
+
 
     }
 

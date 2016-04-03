@@ -21,6 +21,7 @@ public class ActivityAuth extends AppCompatActivity {
     private static String email;
     EditText inputEmail;
     EditText inputPassword;
+    public static String studentName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,7 @@ public class ActivityAuth extends AppCompatActivity {
 
                 @Override
                 public void onClick(View v) {
+<<<<<<< HEAD
 //                    try {
                         Intent intent = new Intent(ActivityAuth.this, ActivityBehaviorsChooseScreen.class);
                         startActivity(intent);
@@ -42,6 +44,15 @@ public class ActivityAuth extends AppCompatActivity {
 //                    } catch (IOException e) {
 //                        e.printStackTrace();
 //                    }
+=======
+                    try {
+                        //Intent intent = new Intent(ActivityAuth.this, SocketActivity.class);
+                        //startActivity(intent);
+                        login();
+                    } catch (IOException e) {
+                      e.printStackTrace();
+                   }
+>>>>>>> origin/master
                 }
             });
         }

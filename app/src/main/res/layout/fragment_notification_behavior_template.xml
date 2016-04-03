@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="50dp"
     android:id="@+id/fragment_notification_behavior_template">
 
 
@@ -12,7 +13,7 @@
         android:text="text"
         android:id="@+id/behavior_notification_Button"
         android:layout_centerHorizontal="true"
-        android:background="#c600f6ee"
+        android:background="#c2fffbf5"
         android:textColor="#000000"
         android:textSize="35sp"
         android:textAlignment="center" />
