@@ -3,11 +3,11 @@ package projectmadcap.madcap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class behaviors_main_screen extends AppCompatActivity {
+public class ActivityUnitsChooseScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_behaviors_main_screen);
+        setContentView(R.layout.activity_units_choose_screen);
     }
 }

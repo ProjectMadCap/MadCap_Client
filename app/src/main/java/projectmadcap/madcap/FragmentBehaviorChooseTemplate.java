@@ -1,4 +1,4 @@
-package layout;
+package projectmadcap.madcap;
 
 
 import android.os.Bundle;
@@ -12,10 +12,10 @@ import projectmadcap.madcap.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class fragment_behavior_choose_template extends Fragment {
+public class FragmentBehaviorChooseTemplate extends Fragment {
 
 
-    public fragment_behavior_choose_template() {
+    public FragmentBehaviorChooseTemplate() {
         // Required empty public constructor
     }
 

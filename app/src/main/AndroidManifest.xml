@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Auth">
+        <activity android:name=".ActivityAuth">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,11 +29,11 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <activity android:name=".StudentHomePage" />
-        <activity android:name=".TopicsMainScreen" />
-        <activity android:name=".behaviors_main_screen" />
-        <activity android:name=".activity_behaviors_choose_screen" />
-        <activity android:name=".units_choose_screen"></activity>
+        <activity android:name=".ActivityStudentHomePage" />
+        <activity android:name=".ActivityUnitsMainScreen" />
+        <activity android:name=".ActivityBehaviorsMainScreen" />
+        <activity android:name=".ActivityBehaviorsChooseScreen" />
+        <activity android:name=".ActivityUnitsChooseScreen"></activity>
     </application>
 
 </manifest>

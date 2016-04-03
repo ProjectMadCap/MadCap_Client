@@ -1,4 +1,4 @@
-package layout;
+package projectmadcap.madcap;
 
 
 import android.os.Bundle;
@@ -12,10 +12,10 @@ import projectmadcap.madcap.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class toolbar extends Fragment {
+public class FragmentToolbar extends Fragment {
 
 
-    public toolbar() {
+    public FragmentToolbar() {
         // Required empty public constructor
     }
 

@@ -1,4 +1,4 @@
-package layout;
+package projectmadcap.madcap;
 
 import android.content.Context;
 import android.net.Uri;
@@ -8,17 +8,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import projectmadcap.madcap.R;
-
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link topics_main_list.OnFragmentInteractionListener} interface
+ * {@link FragmentUnitsMainButtonsPane.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link topics_main_list#newInstance} factory method to
+ * Use the {@link FragmentUnitsMainButtonsPane#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class topics_main_list extends Fragment {
+public class FragmentUnitsMainButtonsPane extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -30,7 +28,7 @@ public class topics_main_list extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public topics_main_list() {
+    public FragmentUnitsMainButtonsPane() {
         // Required empty public constructor
     }
 
@@ -40,11 +38,11 @@ public class topics_main_list extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment topics_main_list.
+     * @return A new instance of fragment topics_dfdfmain_buttons_pane.
      */
     // TODO: Rename and change types and number of parameters
-    public static topics_main_list newInstance(String param1, String param2) {
-        topics_main_list fragment = new topics_main_list();
+    public static FragmentUnitsMainButtonsPane newInstance(String param1, String param2) {
+        FragmentUnitsMainButtonsPane fragment = new FragmentUnitsMainButtonsPane();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -65,7 +63,7 @@ public class topics_main_list extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_units_main_list, container, false);
+        return inflater.inflate(R.layout.fragment_units_main_buttons_pane, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event

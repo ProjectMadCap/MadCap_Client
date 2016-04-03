@@ -3,11 +3,11 @@ package projectmadcap.madcap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class units_choose_screen extends AppCompatActivity {
+public class ActivityStudentHomePage extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_units_choose_screen);
+        setContentView(R.layout.activity_student_home_page);
     }
 }

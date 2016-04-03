@@ -1,4 +1,4 @@
-package layout;
+package projectmadcap.madcap;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,7 +11,7 @@ import projectmadcap.madcap.R;
 /**
  * Created by Atropos on 4/2/16.
  */
-public class NotificationUnitTemplate extends Fragment {
+public class FragmentNotificationUnitTemplate extends Fragment {
 
     @Nullable
     @Override

@@ -16,7 +16,7 @@ import okhttp3.Callback;
 import okhttp3.Response;
 
 
-public class Auth extends AppCompatActivity {
+public class ActivityAuth extends AppCompatActivity {
 
     public static String token;
     EditText inputEmail;
@@ -66,7 +66,7 @@ public class Auth extends AppCompatActivity {
                 for(int i = 1; i < result[3].length()-2; i++)
                     token += result[3].charAt(i);
                 Log.d("RESPONSE", token);
-                Intent intent = new Intent(Auth.this, StudentHomePage.class);
+                Intent intent = new Intent(ActivityAuth.this, ActivityStudentHomePage.class);
                 startActivity(intent);
             }
         });

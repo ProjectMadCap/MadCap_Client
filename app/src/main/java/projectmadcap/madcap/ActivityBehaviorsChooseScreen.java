@@ -3,7 +3,7 @@ package projectmadcap.madcap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class activity_behaviors_choose_screen extends AppCompatActivity {
+public class ActivityBehaviorsChooseScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

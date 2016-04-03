@@ -4,7 +4,7 @@
     android:layout_height="75dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/primary"
-    tools:context="layout.fragment_behavior_choose_template"
+    tools:context=".FragmentBehaviorChooseTemplate"
     android:id="@+id/behavior_holder">
 
     <TextView
