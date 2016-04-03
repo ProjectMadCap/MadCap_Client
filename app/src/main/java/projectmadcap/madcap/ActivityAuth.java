@@ -14,6 +14,7 @@ import java.io.IOException;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
+import projectmadcap.madcap.socketIO.SocketActivity;
 
 
 public class ActivityAuth extends AppCompatActivity {
@@ -35,6 +36,8 @@ public class ActivityAuth extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     try {
+                        Intent intent = new Intent(ActivityAuth.this, ActivityBehaviorsChooseScreen.class);
+                        startActivity(intent);
                         login();
                     } catch (IOException e) {
                         e.printStackTrace();

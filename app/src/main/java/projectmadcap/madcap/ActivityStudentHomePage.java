@@ -4,16 +4,11 @@ import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
-import android.text.Layout;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -21,9 +16,7 @@ import org.json.JSONException;
 
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.zip.Inflater;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -31,64 +24,22 @@ import okhttp3.Response;
 
 public class ActivityStudentHomePage extends AppCompatActivity {
 
-
+    private RecyclerView week_list;
     private static String guardianID;
     private static LinkedList<Student> students;
     TextView name;
-    private RecyclerView week_list;
-    private Behavior[] behaviors;
-    private BehaviorList behaviorList;
-    private BehaviorNotifications[] behaviorNotificationsList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_home_page);
-        //final StudentGet stuGet = new StudentGet();
-        students = new LinkedList<Student>();
-        students.add(new Student("John Baggs", "4"));
-
+        final StudentGet stuGet = new StudentGet();
         name = (TextView)findViewById(R.id.student_name);
 
-        name.setText(students.get(0).getStudentName());
-       // week_list = (RecyclerView) name.findViewById(R.id.recycler_weeks);
-        behaviors = new Behavior[4];
-        behaviors[0] = new Behavior("week 1", 5, "Was shy and lashed out", false);
-        behaviors[1] = new Behavior("week 3", 9, "Excellent except for one argument", false);
-        behaviors[2] = new Behavior("week 2", 10, "Perfect", true);
-        behaviors[3] = new Behavior("week 4", 2, "Was picking fights", false);
-        behaviorList = new BehaviorList();
-        for(int count = 0; count < 4; count++)
-            behaviorList.addBehavior(behaviors[count]);
-        int counter = 0;
-        for(int count = 0; count < behaviorList.size(); count++)
-            if(behaviorList.get(count).isPastViewed() == false)
-                counter++;
-        behaviorNotificationsList = new BehaviorNotifications[counter];
-        counter = 0;
-        for(int count = 0; count < behaviorList.size(); count++)
-        {
-            if(behaviorList.get(count).isPastViewed() == false) {
-                behaviorNotificationsList[counter] = new BehaviorNotifications(behaviorList.get(count).week);
-                counter++;
-            }
-        }
-        AdapterNotification adapterNotification = new AdapterNotification(this, R.layout.fragment_notification_behavior_template, behaviorNotificationsList);
-        ListView listView = (ListView)findViewById(R.id.student_home_page_list_view);
-        listView.setAdapter(adapterNotification);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //behaviorNotificationsList[position]
-            }
-        });
-        //runOnUiThread(new TempUIThread());
 
 
 
-
-
-        /*try {
+        try {
             Call call = stuGet.getBlank("http://45.55.142.81/api/sexyGuardian/" +  ActivityAuth.getEmail(),
                     new Callback() {
                         @Override
@@ -139,7 +90,7 @@ public class ActivityStudentHomePage extends AppCompatActivity {
                                                     e.printStackTrace();
                                                 }
                                             }
-                                            runOnUiThread(new TempUIThread());
+                                            name.setText(students.get(0).getStudentName());
                                             stuGet.getBlank("http://45.55.142.81/api/behaviorHistory/" + students.get(0).getId(),
                                                     new Callback() {
                                                         @Override
@@ -161,9 +112,7 @@ public class ActivityStudentHomePage extends AppCompatActivity {
         });
         } catch (IOException e) {
             e.printStackTrace();
-        }*/
-
-
+        }
     }
 
 
@@ -173,14 +122,5 @@ public class ActivityStudentHomePage extends AppCompatActivity {
 
     public static String getGuardianID() {
         return guardianID;
-    }
-
-    public class TempUIThread implements Runnable
-    {
-
-        public void run()
-        {
-
-        }
     }
 }

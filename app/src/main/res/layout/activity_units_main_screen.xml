@@ -8,11 +8,19 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".ActivityUnitsMainScreen"
-    android:id="@+id/activity_units_main_screen">
+    android:id="@+id/activity_units_main_screen"
+    android:background="@drawable/school_backround">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/fragment_toolbar">
+
+    </include>
 
 
-    <include layout="@layout/fragment_units_main_list"
-        android:layout_alignParentStart="true"
+    <include
+        android:layout_below="@id/toolbar"
+        layout="@layout/fragment_units_main_list"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content" />
 

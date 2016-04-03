@@ -33,12 +33,12 @@ public class AdapterWeek extends RecyclerView.Adapter<AdapterWeek.MyViewHolder> 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
         ModelWeek current = data.get(position);
-        holder.week.setText(current.week);
+        holder.week.setText(current.getWeek());
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return data.size();
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder{
@@ -47,7 +47,6 @@ public class AdapterWeek extends RecyclerView.Adapter<AdapterWeek.MyViewHolder> 
         public MyViewHolder(View itemView) {
             super(itemView);
             week = (TextView) itemView.findViewById(R.id.week_text);
-            icon = (ImageView) itemView.findViewById(R.id.week_image);
         }
     }
 }

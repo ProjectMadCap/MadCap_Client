@@ -28,4 +28,5 @@ dependencies {
     compile 'com.android.support:design:23.2.1'
     compile 'com.squareup.mimecraft:mimecraft:1.1.1'
     compile 'com.android.support:support-v4:23.2.1'
+    compile 'com.github.nkzawa:socket.io-client:0.3.0'
 }

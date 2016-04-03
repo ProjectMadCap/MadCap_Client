@@ -3,7 +3,8 @@
     android:id="@+id/activity_student_home_page"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/school_backround">
 
     <include
         android:id="@+id/include_toolbar"
@@ -15,11 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/student_home_page_list_view"
-        android:layout_gravity="center_horizontal" />
+
 
 
 </LinearLayout>

@@ -8,24 +8,30 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".ActivityBehaviorsChooseScreen"
-    android:id="@+id/activity_behaviors_choose_screen">
+    android:id="@+id/activity_behaviors_choose_screen"
+    android:background="@drawable/school_backround">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/fragment_toolbar">
+
+    </include>
 
     <Spinner
+        android:layout_below="@id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/behavior_week_chooser"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-
-
-    <ListView
-        android:layout_width="match_parent"
+    <include
+        android:layout_below="@id/behavior_week_chooser"
+        android:id="@+id/recycler_weeks"
+        layout="@layout/recycler_weeks"
         android:layout_height="wrap_content"
-        android:id="@+id/behavior_week_list_view"
-        android:layout_below="@+id/behavior_week_chooser"
-        android:layout_alignParentStart="true"
-        android:layout_above="@+id/imageButton" />
+        android:layout_width="match_parent">
+
+    </include>
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -39,7 +45,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/imageButton2"
         android:src="@drawable/right_arrow"
-        android:layout_below="@+id/behavior_week_list_view"
-        android:layout_alignEnd="@+id/behavior_week_list_view" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>
-
