@@ -9,6 +9,8 @@ import android.widget.Button;
 
 public class ActivityBehaviorsMainScreen extends AppCompatActivity {
 
+    public static Behavior behaviorToAdd;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,4 +29,6 @@ public class ActivityBehaviorsMainScreen extends AppCompatActivity {
             });
         }
     }
+
+
 }

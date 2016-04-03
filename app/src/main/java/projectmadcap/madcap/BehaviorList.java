@@ -21,4 +21,14 @@ public class BehaviorList extends ArrayList<Behavior>
         this.add(count, behaviorToAdd);
     }
 
+    public Behavior getAtWeek(String weekToFind)
+    {
+        int count = 0;
+        int position = 0;
+        for(count = 0; count < this.size();count++)
+            if(this.get(count).getWeek().equals(weekToFind) == true)
+                position = count;
+        return this.get(position);
+    }
+
 }
