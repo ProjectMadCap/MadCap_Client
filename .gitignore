@@ -13,3 +13,15 @@
 .idea/libraries/support_vector_drawable_23_2_1.xml
 .idea/libraries/play_services_appindexing_8_1_0.xml
 .idea/libraries/design_23_2_1.xml
+.gradle/2.10/taskArtifacts/cache.properties
+.gradle/2.10/taskArtifacts/fileHashes.bin
+gradle/wrapper/gradle-wrapper.properties
+.gradle/2.10/taskArtifacts/cache.properties.lock
+.gradle/2.10/taskArtifacts/taskArtifacts.bin
+.gradle/2.10/taskArtifacts/outputFileStates.bin
+local.properties
+gradlew.bat
+gradle/wrapper/gradle-wrapper.jar
+gradlew
+build/generated/mockable-android-23.jar
+.gradle/2.10/taskArtifacts/fileSnapshots.bin
