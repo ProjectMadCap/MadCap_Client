@@ -1,4 +1,4 @@
-package projectmadcap.madcap;
+package layout;
 
 import android.content.Context;
 import android.net.Uri;
@@ -8,16 +8,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import projectmadcap.madcap.R;
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link BehaviorDescription.OnFragmentInteractionListener} interface
+ * {@link topics_main_list.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link BehaviorDescription#newInstance} factory method to
+ * Use the {@link topics_main_list#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class BehaviorDescription extends Fragment {
+public class topics_main_list extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,7 +30,7 @@ public class BehaviorDescription extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public BehaviorDescription() {
+    public topics_main_list() {
         // Required empty public constructor
     }
 
@@ -39,11 +40,11 @@ public class BehaviorDescription extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment_behavior_description.
+     * @return A new instance of fragment topics_main_list.
      */
     // TODO: Rename and change types and number of parameters
-    public static BehaviorDescription newInstance(String param1, String param2) {
-        BehaviorDescription fragment = new BehaviorDescription();
+    public static topics_main_list newInstance(String param1, String param2) {
+        topics_main_list fragment = new topics_main_list();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -64,7 +65,7 @@ public class BehaviorDescription extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_behavior_description, container, false);
+        return inflater.inflate(R.layout.fragment_units_main_list, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
