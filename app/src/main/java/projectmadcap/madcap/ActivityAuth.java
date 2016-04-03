@@ -36,23 +36,20 @@ public class ActivityAuth extends AppCompatActivity {
 
                 @Override
                 public void onClick(View v) {
-<<<<<<< HEAD
 //                    try {
-                        Intent intent = new Intent(ActivityAuth.this, ActivityBehaviorsChooseScreen.class);
-                        startActivity(intent);
+//                        Intent intent = new Intent(ActivityAuth.this, SocketActivity.class);
+//                        startActivity(intent);
 //                        login();
 //                    } catch (IOException e) {
 //                        e.printStackTrace();
 //                    }
-=======
                     try {
-                        //Intent intent = new Intent(ActivityAuth.this, SocketActivity.class);
-                        //startActivity(intent);
+                        Intent intent = new Intent(ActivityAuth.this, SocketActivity.class);
+                        startActivity(intent);
                         login();
                     } catch (IOException e) {
                       e.printStackTrace();
                    }
->>>>>>> origin/master
                 }
             });
         }
@@ -82,8 +79,8 @@ public class ActivityAuth extends AppCompatActivity {
                 //if(result[1].equals("false,\"message\""))
                 //    return;
                 Log.d("RESPONSE", temp);
-                Intent intent = new Intent(ActivityAuth.this, ActivityStudentHomePage.class);
-                startActivity(intent);
+               // Intent intent = new Intent(ActivityAuth.this, ActivityStudentHomePage.class);
+               // startActivity(intent);
             }
         });
     }
