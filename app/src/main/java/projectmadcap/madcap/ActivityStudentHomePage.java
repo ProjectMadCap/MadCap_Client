@@ -1,14 +1,8 @@
 package projectmadcap.madcap;
 
-import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
-import android.util.AttributeSet;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -24,7 +18,6 @@ import okhttp3.Response;
 
 public class ActivityStudentHomePage extends AppCompatActivity {
 
-    private RecyclerView week_list;
     private static String guardianID;
     private static LinkedList<Student> students;
     TextView name;
@@ -35,11 +28,6 @@ public class ActivityStudentHomePage extends AppCompatActivity {
         setContentView(R.layout.activity_student_home_page);
         final StudentGet stuGet = new StudentGet();
         name = (TextView)findViewById(R.id.student_name);
-
-        week_list = (RecyclerView) name.findViewById(R.id.recycler_weeks);
-
-
-
         try {
             Call call = stuGet.getBlank("http://45.55.142.81/api/sexyGuardian/" +  ActivityAuth.getEmail(),
                     new Callback() {
@@ -115,7 +103,6 @@ public class ActivityStudentHomePage extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-
 
     public static LinkedList<Student> getStudents() {
         return students;
