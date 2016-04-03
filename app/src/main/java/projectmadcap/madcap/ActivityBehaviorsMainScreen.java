@@ -19,8 +19,8 @@ public class ActivityBehaviorsMainScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_behaviors_main_screen);
-        Toolbar toolbar = (Toolbar)findViewById(R.id.fragment_toolbar);
-        setSupportActionBar(toolbar);
+        //Toolbar toolbar = (Toolbar)findViewById(R.id.fragment_toolbar);
+        //setSupportActionBar(toolbar);
         Button menu = (Button)findViewById(R.id.menu_button);
         TextView weekView = (TextView)findViewById(R.id.week_text_view);
         weekView.setText(behaviorToAdd.getWeek());
