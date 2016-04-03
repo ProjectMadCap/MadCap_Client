@@ -42,9 +42,12 @@ public class ActivityStudentHomePage extends AppCompatActivity {
                             Log.d("GUARD_RESPONSE", resp);
                             String[] result = resp.split(":");
                             guardianID = "";
-                            for (int i = 1; i < result[5].length() - 7; i++) {
-                                guardianID += result[5].charAt(i);
-                            }
+                            if(result.length > 1)
+                                for (int i = 1; i < result[5].length() - 7; i++) {
+                                    guardianID += result[5].charAt(i);
+                                }
+                            else
+                                return;
                             Log.d("GUARDIAN_ID", guardianID);
                             stuGet.getStudent("http://45.55.142.81/api/student/" + guardianID,
                                     ActivityStudentHomePage.getGuardianID(), new Callback() {
