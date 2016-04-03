@@ -5,27 +5,28 @@ package projectmadcap.madcap;
  */
 public class Behavior
 {
-    public String week;
+    //public String week;
     public int weekNumber;
     public int performance;
     public String notes;
     public boolean pastViewed;
 
-    public Behavior(String weekToAdd, int performanceToAdd, String notesToAdd, boolean viewed)
+    public Behavior(String weekNumber, String performanceToAdd, String notesToAdd, boolean viewed)
     {
-        week = weekToAdd;
-        performance = performanceToAdd;
+        //week = weekToAdd;
+        performance = Integer.parseInt(performanceToAdd);
         notes = notesToAdd;
         pastViewed = viewed;
-        String[] tokens = week.split(" ");
-        weekNumber = Integer.parseInt(tokens[1]);
+        this.weekNumber = Integer.parseInt(weekNumber);
+        //String[] tokens = week.split(" ");
+        //weekNumber = Integer.parseInt(tokens[1]);
     }
 
     @Override
     public String toString() {
         return "Behavior{" +
                 "notes='" + notes + '\'' +
-                ", week='" + week + '\'' +
+                ", week='" + weekNumber + '\'' +
                 ", performance=" + performance +
                 '}';
     }
@@ -42,9 +43,9 @@ public class Behavior
         this.performance = performance;
     }
 
-    public void setWeek(String week) {
-        this.week = week;
-    }
+    //public void setWeek(String week) {
+    //   this.week = week;
+    //}
 
     public String getNotes() {
         return notes;
@@ -54,9 +55,9 @@ public class Behavior
         return performance;
     }
 
-    public String getWeek() {
-        return week;
-    }
+    //public String getWeek() {
+   //     return week;
+   // }
 
     public int getWeekNumber() {
         return weekNumber;

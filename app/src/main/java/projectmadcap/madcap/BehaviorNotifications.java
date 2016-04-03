@@ -8,10 +8,10 @@ public class BehaviorNotifications
 
     public String text;
 
-    public BehaviorNotifications(String week)
+    public BehaviorNotifications(int week)
     {
 
-        text = week + " Unread Behaviors";
+        text = "Week " + week + " Unread Behaviors";
 
     }
 

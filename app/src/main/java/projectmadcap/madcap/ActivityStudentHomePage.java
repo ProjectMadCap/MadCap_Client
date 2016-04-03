@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -112,9 +114,11 @@ BehaviorNotifications(behaviorList.get(count).week);
 
 public class ActivityStudentHomePage extends AppCompatActivity {
 
-    private RecyclerView week_list;
+    //private RecyclerView week_list;
     private static String guardianID;
     private static LinkedList<Student> students;
+    private static BehaviorList behaviors;
+    private BehaviorNotifications[] behaviorNotificationsList;
     TextView name;
 
     @Override
@@ -123,9 +127,6 @@ public class ActivityStudentHomePage extends AppCompatActivity {
         setContentView(R.layout.activity_student_home_page);
         final StudentGet stuGet = new StudentGet();
         name = (TextView)findViewById(R.id.student_name);
-
-
-
 
         try {
             Call call = stuGet.getBlank("http://45.55.142.81/api/sexyGuardian/" +  ActivityAuth.getEmail(),
@@ -188,12 +189,52 @@ public class ActivityStudentHomePage extends AppCompatActivity {
 
                                                         @Override
                                                         public void onResponse(Call call, Response response) throws IOException {
-                                                            String resp = response.body().string();
-                                                            Log.d("HISTORY_WEEK", resp);
+                                                            final String weekStr = response.body().string();
+                                                            Log.d("HISTORY_WEEK", weekStr);
                                                             runOnUiThread(new Runnable() {
                                                                 @Override
                                                                 public void run() {
                                                                     name.setText(nameStr);
+                                                                    JSONArray weeks = null;
+                                                                    behaviors = new BehaviorList();
+                                                                    try {
+                                                                        weeks = new JSONArray(weekStr);
+                                                                    } catch (JSONException e) {
+                                                                        e.printStackTrace();
+                                                                    }
+                                                                    for(int i = 0; i < weeks.length(); i++) {
+                                                                        try {
+                                                                            behaviors.addBehavior(new Behavior( weeks.getJSONObject(i).getString("week"),
+                                                                                    weeks.getJSONObject(i).getString("rating"),
+                                                                                    weeks.getJSONObject(i).getString("description"), false));
+                                                                        } catch (JSONException e) {
+                                                                            e.printStackTrace();
+                                                                        }
+                                                                    }
+                                                                    int counter = 0;
+                                                                    for(int count = 0; count < behaviors.size(); count++) {
+                                                                        if (behaviors.get(count).isPastViewed() == false) {
+                                                                            counter++;
+                                                                        }
+                                                                    }        behaviorNotificationsList = new BehaviorNotifications[counter];
+                                                                    counter = 0;
+                                                                    for(int count = 0; count < behaviors.size(); count++) {
+                                                                        if(behaviors.get(count).isPastViewed() == false) {
+                                                                            behaviorNotificationsList[counter] = new
+                                                                                    BehaviorNotifications(behaviors.get(count).weekNumber);
+                                                                            counter++;
+                                                                        }
+                                                                    }
+                                                                    AdapterNotification adapterNotification = new AdapterNotification(ActivityStudentHomePage.this, R.layout.fragment_notification_behavior_template, behaviorNotificationsList);
+                                                                    ListView listView = (ListView)findViewById(R.id.student_home_page_list_view);
+                                                                    listView.setAdapter(adapterNotification);
+                                                                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener()
+                                                                    {
+
+                                                                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                                                                            //behaviorNotificationsList[position]
+                                                                        }
+                                                                    });
                                                                 }
                                                             });
                                                         }
@@ -203,12 +244,22 @@ public class ActivityStudentHomePage extends AppCompatActivity {
                                         }
                                     });
                         }
-        });
+                    });
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 
+
+    public static BehaviorList getBehaviors() {
+        return behaviors;
+    }
+
+
+    public BehaviorNotifications[] getBehaviorNotificationsList() {
+        return behaviorNotificationsList;
+    }
 
     public static LinkedList<Student> getStudents() {
         return students;
