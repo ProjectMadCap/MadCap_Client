@@ -1,0 +1,29 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="75dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/primary"
+    tools:context="layout.fragment_behavior_choose_template"
+    android:id="@+id/behavior_holder">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/week_text"
+        android:text="Week 6"
+        android:textSize="35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+    
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/week_image"
+        android:background="@drawable/smile10"
+        android:paddingEnd="50dp"
+        android:layout_alignBottom="@+id/week_text"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"/>
+
+</RelativeLayout>
