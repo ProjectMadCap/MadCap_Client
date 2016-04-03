@@ -33,3 +33,7 @@ build/generated/mockable-android-23.jar
 .idea/libraries/socket_io_client_0_3_0.xml
 .idea/libraries/engine_io_client_0_3_1.xml
 build/intermediates/dex-cache/cache.xml
+.idea/misc.xml
+.idea/misc.xml
+app/app.iml
+.idea/misc.xml
