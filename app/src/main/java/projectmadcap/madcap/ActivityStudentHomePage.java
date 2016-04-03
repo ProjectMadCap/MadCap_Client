@@ -36,7 +36,6 @@ public class ActivityStudentHomePage extends AppCompatActivity {
         final StudentGet stuGet = new StudentGet();
         name = (TextView)findViewById(R.id.student_name);
 
-        week_list = (RecyclerView) name.findViewById(R.id.recycler_weeks);
 
 
 

@@ -4,10 +4,7 @@ package projectmadcap.madcap;
  * Created by Nick on 4/3/2016.
  */
 public class ModelWeek {
-<<<<<<< HEAD
-    String week;
-    boolean hasRead;
-=======
+
     private String week;
     private int rating;
     boolean hasRead;
@@ -15,6 +12,10 @@ public class ModelWeek {
     public ModelWeek(String week, int rating) {
         this.week = week;
         this.rating = rating;
+    }
+
+    public String getWeek(){
+        return this.week;
     }
 
     public ModelWeek[] getModelWeeks() {
@@ -33,5 +34,4 @@ public class ModelWeek {
 
         return weeks;
     }
->>>>>>> origin/master
 }

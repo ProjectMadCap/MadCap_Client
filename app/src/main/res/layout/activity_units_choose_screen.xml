@@ -8,13 +8,20 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".ActivityUnitsChooseScreen"
-    android:id="@+id/activity__units_choose_screen">
+    android:id="@+id/activity__units_choose_screen"
+    android:background="@drawable/school_backround">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/fragment_toolbar">
+
+    </include>
 
     <Spinner
+        android:layout_below="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/units_week_chooser"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
     <ListView

@@ -5,9 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="75dp"
     android:layout_margin="16dp"
-    android:background="#87a12baa"
+    android:background="#66ffffff"
     tools:context=".FragmentBehaviorChooseTemplate">
-
     <TextView
         android:id="@+id/week_text"
         android:layout_width="wrap_content"

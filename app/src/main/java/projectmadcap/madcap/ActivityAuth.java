@@ -36,7 +36,7 @@ public class ActivityAuth extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     try {
-                        Intent intent = new Intent(ActivityAuth.this, SocketActivity.class);
+                        Intent intent = new Intent(ActivityAuth.this, ActivityBehaviorsChooseScreen.class);
                         startActivity(intent);
                         login();
                     } catch (IOException e) {

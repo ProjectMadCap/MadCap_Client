@@ -3,7 +3,8 @@
     android:id="@+id/activity_student_home_page"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/school_backround">
 
     <include
         android:id="@+id/include_toolbar"
@@ -15,12 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_weeks"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-    </android.support.v7.widget.RecyclerView>
 
 
 </LinearLayout>
