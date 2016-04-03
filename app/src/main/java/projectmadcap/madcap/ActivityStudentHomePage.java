@@ -1,6 +1,7 @@
 package projectmadcap.madcap;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
@@ -122,6 +123,7 @@ public class ActivityStudentHomePage extends AppCompatActivity {
     public int doneFlag;
     public JSONArray weeks;
     public String weekStr;
+
     TextView name;
 
     @Override
@@ -184,6 +186,7 @@ public class ActivityStudentHomePage extends AppCompatActivity {
                                                 }
                                             }
                                             final String nameStr = students.get(0).getStudentName();
+                                            ActivityAuth.studentName = nameStr;
                                             stuGet.getBlank("http://45.55.142.81/api/behaviorHistory/" + students.get(0).getId(),
                                                     new Callback() {
                                                         @Override
@@ -226,7 +229,7 @@ public class ActivityStudentHomePage extends AppCompatActivity {
                                                                     for(int count = 0; count < behaviors.size(); count++) {
                                                                         if(behaviors.get(count).isPastViewed() == false) {
                                                                             behaviorNotificationsList[counter] = new
-                                                                                    BehaviorNotifications(behaviors.get(count).weekNumber);
+                                                                                    BehaviorNotifications(behaviors.get(count).weekNumber, count);
                                                                             counter++;
                                                                         }
                                                                     }
@@ -237,7 +240,9 @@ public class ActivityStudentHomePage extends AppCompatActivity {
                                                                     {
 
                                                                         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                                                                            //behaviorNotificationsList[position]
+                                                                            ActivityBehaviorsChooseScreen.selectedBehavior = behaviors.get(behaviorNotificationsList[position].getWeekId());
+                                                                            Intent intent = new Intent(ActivityStudentHomePage.this, ActivityBehaviorsChooseScreen.class);
+                                                                            startActivity(intent);
                                                                         }
                                                                     });
                                                                 }

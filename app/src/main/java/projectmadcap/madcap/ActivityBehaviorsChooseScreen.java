@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,6 +12,7 @@ import java.util.List;
 public class ActivityBehaviorsChooseScreen extends AppCompatActivity {
 
     AdapterWeek adapter;
+    public static Behavior selectedBehavior;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +22,8 @@ public class ActivityBehaviorsChooseScreen extends AppCompatActivity {
         RecyclerView week_list = (RecyclerView) findViewById(R.id.recycler_weeks);
 
         List<ModelWeek> weekArray = getWeeks();
+        TextView name = (TextView)findViewById(R.id.student_name);
+        name.setText(ActivityAuth.studentName);
 
         adapter = new AdapterWeek(ActivityBehaviorsChooseScreen.this, weekArray);
         week_list.setAdapter(adapter);
@@ -54,5 +58,10 @@ public class ActivityBehaviorsChooseScreen extends AppCompatActivity {
 
 
         return data;
+    }
+
+    public static void addSelectedWeek(Behavior weekToAdd)
+    {
+        ActivityBehaviorsChooseScreen.selectedBehavior = weekToAdd;
     }
 }
