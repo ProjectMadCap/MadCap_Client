@@ -23,6 +23,7 @@ public class AdapterWeek extends RecyclerView.Adapter<AdapterWeek.MyViewHolder> 
         inflater = LayoutInflater.from(context);
         this.data = data;
     }
+
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = inflater.inflate(R.layout.fragment_behavior_choose_template, parent,false);
