@@ -12,4 +12,12 @@
         android:id="@+id/topics_list_view"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/blah_text_view"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>
