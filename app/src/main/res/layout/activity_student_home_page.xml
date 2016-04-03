@@ -13,18 +13,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-    <include layout="@layout/fragment_behavior"
-        android:layout_below="@+id/include2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/include3"/>
-
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/student_behavior_descriptions_list_view"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/include3" />
+        android:id="@+id/notifications_list_view"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="false"
+        android:layout_below="@+id/include2" />
 
 
 </RelativeLayout>
