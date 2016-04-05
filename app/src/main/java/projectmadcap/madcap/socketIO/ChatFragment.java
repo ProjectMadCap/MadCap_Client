@@ -58,14 +58,7 @@ public class ChatFragment extends Fragment {
     private List<Message> mMessages = new ArrayList<>();
     private RecyclerView.Adapter mAdapter;
 
-    private Socket socket;
-    {
-        try{
-            socket = IO.socket("http://10.0.0.2"); //TODO: change to ours
-        }catch(URISyntaxException e){
-            throw new RuntimeException(e);
-        }
-    }
+    private static Socket socket;
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
@@ -92,8 +85,13 @@ public class ChatFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
-        socket.connect();
-        socket.on("message", handleIncomingMessages);
+        try{
+            socket = IO.socket("http://104.236.56.210"); //TODO: change to ours
+            socket.connect();
+            socket.on("message", handleIncomingMessages);
+        }catch(URISyntaxException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 

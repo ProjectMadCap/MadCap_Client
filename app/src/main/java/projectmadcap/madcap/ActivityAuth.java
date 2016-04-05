@@ -38,8 +38,8 @@ public class ActivityAuth extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     try {
-                        //Intent intent = new Intent(ActivityAuth.this, SocketActivity.class);
-                        //startActivity(intent);
+                        Intent intent = new Intent(ActivityAuth.this, SocketActivity.class);
+                        startActivity(intent);
                         login();
                     } catch (IOException e) {
                       e.printStackTrace();
