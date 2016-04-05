@@ -33,6 +33,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import projectmadcap.madcap.R;
+import projectmadcap.madcap.config.Config;
 
 
 /**
@@ -44,6 +45,7 @@ import projectmadcap.madcap.R;
  * create an instance of this fragment.
  */
 public class ChatFragment extends Fragment {
+    private static final String TAG = "ChatFragment";
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -86,7 +88,7 @@ public class ChatFragment extends Fragment {
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
         try{
-            socket = IO.socket("http://104.236.56.210"); //TODO: change to ours
+            socket = IO.socket(Config.BASE_URL); //TODO: change to ours
             socket.connect();
             socket.on("message", handleIncomingMessages);
         }catch(URISyntaxException e) {
@@ -153,7 +155,7 @@ public class ChatFragment extends Fragment {
             sendText.put("text",message);
             socket.emit("message", sendText);
         }catch(JSONException e){
-
+            Log.e(TAG, "Error sending message.", e);
         }
 
     }

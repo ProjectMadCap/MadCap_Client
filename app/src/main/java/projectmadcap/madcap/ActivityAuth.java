@@ -14,6 +14,7 @@ import java.io.IOException;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
+import projectmadcap.madcap.config.Config;
 import projectmadcap.madcap.socketIO.SocketActivity;
 
 
@@ -38,8 +39,8 @@ public class ActivityAuth extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     try {
-                        Intent intent = new Intent(ActivityAuth.this, SocketActivity.class);
-                        startActivity(intent);
+//                        Intent intent = new Intent(ActivityAuth.this, SocketActivity.class);
+//                        startActivity(intent);
                         login();
                     } catch (IOException e) {
                       e.printStackTrace();
@@ -54,13 +55,13 @@ public class ActivityAuth extends AppCompatActivity {
         email = inputEmail.getText().toString();
         String password = inputPassword.getText().toString();
         Log.d("EMAIL_PASSWORD", email + " " + password);
-        //Intent intent = new Intent(ActivityAuth.this, ActivityStudentHomePage.class);
-        //startActivity(intent);
+        Intent intent = new Intent(ActivityAuth.this, ActivityStudentHomePage.class);
+        startActivity(intent);
         LoginPost loginPost = new LoginPost();
         Pair<String, String> emailPair = new Pair<>("email", email);
         Pair<String, String> passPair = new Pair<>("password", password);
 
-        Call call = loginPost.post("http://45.55.142.81/authenticate/device", emailPair, passPair, new Callback() {
+        Call call = loginPost.post(Config.BASE_URL + "/authenticate/device", emailPair, passPair, new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
                 Log.e("JSON FAILURE", "could not connect to database server");

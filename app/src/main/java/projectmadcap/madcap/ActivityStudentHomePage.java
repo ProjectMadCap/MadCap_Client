@@ -18,6 +18,7 @@ import android.widget.TextView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 
 
 import java.io.IOException;
@@ -26,6 +27,7 @@ import java.util.LinkedList;
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.Response;
+import projectmadcap.madcap.config.Config;
 
 /*
     code I added
@@ -136,7 +138,7 @@ public class ActivityStudentHomePage extends AppCompatActivity {
         ActivityAuth.lastPageOpen = "ActivityStudentHomePage";
 
         try {
-            Call call = stuGet.getBlank("http://45.55.142.81/api/sexyGuardian/" +  ActivityAuth.getEmail(),
+            Call call = stuGet.getBlank(Config.BASE_URL + "/api/sexyGuardian/" +  ActivityAuth.getEmail(),
                     new Callback() {
                         @Override
                         public void onFailure(Call call, IOException e) {
@@ -145,18 +147,23 @@ public class ActivityStudentHomePage extends AppCompatActivity {
 
                         @Override
                         public void onResponse(Call call, Response response) throws IOException {
-                            String resp = response.body().string();
-                            Log.d("GUARD_RESPONSE", resp);
-                            String[] result = resp.split(":");
-                            guardianID = "";
-                            if(result.length > 1)
-                                for (int i = 1; i < result[5].length() - 7; i++) {
-                                    guardianID += result[5].charAt(i);
-                                }
-                            else
-                                return;
+//                            String resp = response.body().string();
+                            try {
+                                JSONObject json = new JSONObject(response.body().string());
+                                guardianID = json.getString("_id");
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+//                            Log.d("GUARD_RESPONSE", resp);
+//                            String[] result = resp.split(":");
+//                            if(result.length > 1)
+//                                for (int i = 1; i < result[5].length() - 7; i++) {
+//                                    guardianID += result[5].charAt(i);
+//                                }
+//                            else
+//                                return;
                             Log.d("GUARDIAN_ID", guardianID);
-                            stuGet.getStudent("http://45.55.142.81/api/student/" + guardianID,
+                            stuGet.getStudent(Config.BASE_URL + "/api/student/" + guardianID,
                                     ActivityStudentHomePage.getGuardianID(), new Callback() {
                                         @Override
                                         public void onFailure(Call call, IOException e) {
@@ -188,7 +195,7 @@ public class ActivityStudentHomePage extends AppCompatActivity {
                                             }
                                             final String nameStr = students.get(0).getStudentName();
                                             ActivityAuth.studentName = nameStr;
-                                            stuGet.getBlank("http://45.55.142.81/api/behaviorHistory/" + students.get(0).getId(),
+                                            stuGet.getBlank(Config.BASE_URL + "/api/behaviorHistory/" + students.get(0).getId(),
                                                     new Callback() {
                                                         @Override
                                                         public void onFailure(Call call, IOException e) {
